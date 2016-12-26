@@ -69,12 +69,12 @@ key_down = keyboard_check(vk_down) || gamepad_button_check(0,gp_padd);
     //Action keys
     //Falta meter teclas
     //Y dejar claro como funcionan
-key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1);
+key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(ord('W'));
 key_action_2_pressed = gamepad_button_check_pressed(0, gp_face2);
 key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3);
 key_action_4_pressed = gamepad_button_check_pressed(0, gp_face4);
 
-//If we aren´t still by the pause or conversation
+//If we are not locked...
 if(status_still == false){
     //Move the player
     h_direction = -key_left + key_right;
@@ -109,6 +109,12 @@ if(status_still == false){
     //Using x,y
     x += hsp;
     y += vsp;
+    //Acción de ataque
+    if(key_action_1_pressed){
+        attack = instance_create(x, y, obj_attack);
+        attack.direction = direction;
+        attack.image_angle = direction;
+    }
 }
 //Ya meteremos cambio de sprite y demás
 </string>
