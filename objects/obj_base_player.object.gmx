@@ -35,6 +35,12 @@ v_direction = 0;
 last_hDirection = 0;
 last_vDirection = 0;
 movement_speed = 10;
+//Varaibles de salto
+zsp = 0;
+jumpspeed = 10;
+falling_speed = 0;
+distance_to_floor = 0;
+grounded = false;
 //Status variables
 status_still = false;
 </string>
@@ -69,8 +75,8 @@ key_down = keyboard_check(vk_down) || gamepad_button_check(0,gp_padd);
     //Action keys
     //Falta meter teclas
     //Y dejar claro como funcionan
-key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(ord('W'));
-key_action_2_pressed = gamepad_button_check_pressed(0, gp_face2);
+key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_control);
+key_action_2_pressed = gamepad_button_check_pressed(0, gp_face2) || keyboard_check_pressed(vk_space);
 key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3);
 key_action_4_pressed = gamepad_button_check_pressed(0, gp_face4);
 
@@ -93,11 +99,13 @@ if(status_still == false){
     if(v_direction == 0 &amp;&amp; vsp != 0)
         vsp -= sign(vsp);
     //(To not) collide control
-    while(place_meeting(x + hsp, y, obj_solid_terrain) &amp;&amp; hsp != 0){
-        hsp -= sign(hsp);
-    }
-    while(place_meeting(x, y + vsp, obj_solid_terrain) &amp;&amp; vsp != 0){
-        vsp -= sign(vsp);
+    if(grounded == true){
+        while(place_meeting(x + hsp, y, obj_solid_terrain) &amp;&amp; hsp != 0){
+            hsp -= sign(hsp);
+        }
+        while(place_meeting(x, y + vsp, obj_solid_terrain) &amp;&amp; vsp != 0){
+            vsp -= sign(vsp);
+        }
     }
     //Control to not go out of the room
     while(x + hsp &lt; sprite_width/2 || x + hsp &gt; room_width - sprite_width/2){
@@ -106,15 +114,39 @@ if(status_still == false){
     while(y + vsp &lt; sprite_height/2 || y + vsp &gt; room_height - sprite_height/2){
         vsp -= sign(vsp);
     }
-    //Using x,y
-    x += hsp;
-    y += vsp;
+    
     //Acción de ataque
     if(key_action_1_pressed){
         attack = instance_create(x, y, obj_attack);
         attack.direction = direction;
         attack.image_angle = direction;
     }
+    //Acción de salto
+    if(key_action_2_pressed &amp;&amp; grounded == true){
+        grounded = false;
+            //
+        falling_speed = -jumpspeed;            
+    }
+    //Control de gravedad
+    if(grounded == false){
+        falling_speed += 1;
+        if(distance_to_floor - falling_speed &lt; 0){
+            zsp = distance_to_floor;
+            //zsp = 0;
+            distance_to_floor = 0;
+            falling_speed = 0;
+            grounded = true;
+        }
+        else{
+            distance_to_floor -= falling_speed;
+            zsp = falling_speed;
+        }
+    }
+    //Using x,y
+    x += hsp;
+    y += vsp + zsp;
+    //
+    zsp = 0;
 }
 //Ya meteremos cambio de sprite y demás
 </string>
@@ -140,7 +172,65 @@ if(status_still == false){
           <argument>
             <kind>1</kind>
             <string>//En el caso de que se clave a pesar del control previo
-move_outside_solid(point_direction(other.x, other.y, x, y), 0);
+if(grounded == true)
+    move_outside_solid(point_direction(other.x, other.y, x, y), 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Control stuff
+//draw_text(10, 10, distance_to_floor);
+//draw_text(10, 30, falling_speed);
+
+//Y el daño
+draw_set_alpha(1 - health/100);
+draw_sprite(spr_damage, 0, 0, 0);
+draw_set_alpha(1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Primero la sombra
+draw_sprite(spr_shadow, 0, x, y + distance_to_floor);
+//a si mismo
+draw_self();
+
 </string>
           </argument>
         </arguments>
