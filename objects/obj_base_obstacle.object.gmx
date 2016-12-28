@@ -32,7 +32,7 @@ hspeed = -15;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_base_player">
+    <event eventtype="4" ename="obj_bull">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,15 +49,10 @@ hspeed = -15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
-if(other.grounded == true){
-    //Le quitamos vida
-    other.health -= 10;
-    //Generamos escombros
-    
-    //Y lo destruimos
-    instance_destroy();
-}
+            <string>//Generemos escombros
+
+//Y lo destruimos
+instance_destroy();
 </string>
           </argument>
         </arguments>

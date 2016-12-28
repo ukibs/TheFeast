@@ -107,14 +107,11 @@ if(status_still == false){
             vsp -= sign(vsp);
         }
     }
-    //Control to not go out of the room
-    while(x + hsp &lt; sprite_width/2 || x + hsp &gt; room_width - sprite_width/2){
-        hsp -= sign(hsp);
-    }
-    while(y + vsp &lt; sprite_height/2 || y + vsp &gt; room_height - sprite_height/2){
+    //Control de horizonte
+        //De momento con una altura fijada
+    while(y + vsp + distance_to_floor &lt; 200 &amp;&amp; vsp != 0){
         vsp -= sign(vsp);
     }
-    
     //Acción de ataque
     if(key_action_1_pressed){
         attack = instance_create(x, y, obj_attack);
@@ -142,11 +139,14 @@ if(status_still == false){
             zsp = falling_speed;
         }
     }
-    //Using x,y
+    //Aplicamos movimiento en x,y
     x += hsp;
     y += vsp + zsp;
     //
     zsp = 0;
+    //Control para no salir de la pantalla
+    x = clamp(x, sprite_width/2, room_width - sprite_width/2);
+    y = clamp(y, sprite_height/2, room_height - sprite_height/2);
 }
 //Ya meteremos cambio de sprite y demás
 </string>

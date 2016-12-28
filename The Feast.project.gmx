@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_solid_terrain</sprite>
+    <sprite>sprites\spr_solid_terrain_tall</sprite>
     <sprite>sprites\spr_hooman</sprite>
     <sprite>sprites\spr_hooman_splash</sprite>
     <sprite>sprites\spr_attack</sprite>
@@ -27,8 +28,10 @@
     <objects name="Ox Fight">
       <object>objects\obj_bull</object>
       <object>objects\obj_bull_player</object>
-      <object>objects\obj_small_obstacle</object>
       <object>objects\obj_obstacle_manager</object>
+      <object>objects\obj_base_obstacle</object>
+      <object>objects\obj_jumpable_obstacle</object>
+      <object>objects\obj_unjumpable_obstacle</object>
     </objects>
   </objects>
   <rooms name="rooms">
