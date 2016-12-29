@@ -109,8 +109,8 @@ if(status_still == false){
     }
     //Control de horizonte
         //De momento con una altura fijada
-    while(y + vsp + distance_to_floor &lt; 200 &amp;&amp; vsp != 0){
-        vsp -= sign(vsp);
+    while(place_meeting(x, y + vsp + distance_to_floor, obj_background)){
+        vsp += 1;
     }
     //Acción de ataque
     if(key_action_1_pressed){
