@@ -60,10 +60,14 @@ if(stopped == false &amp;&amp; hspeed &lt; max_speed)
     hspeed ++;
 //Vida cuando se le puede golpear
 if(stopped == true &amp;&amp; life &lt;= 0){
-    stopped = false;
-    life = 3;
-    max_speed += 2;
-    stage ++;
+    if (stage&lt;3){
+        stopped = false;
+        life = 3;
+        max_speed += 2;
+        stage ++;
+    } else {
+        // Aqui controlaremos la muerte del boss
+    }
 }
 </string>
           </argument>
