@@ -16,31 +16,28 @@
     <sprite>sprites\spr_bullsy</sprite>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_background</sprite>
+    <sprite>sprites\spr_bull_stopper</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_base_player</object>
     <object>objects\obj_solid_terrain</object>
+    <object>objects\obj_unjumpable_terrain</object>
+    <object>objects\obj_jumpable_terrain</object>
     <object>objects\obj_destructible</object>
     <object>objects\obj_hooman</object>
     <object>objects\obj_attack</object>
     <object>objects\obj_hooman_splash</object>
-    <objects name="Ox Fight A">
+    <objects name="Ox Fight B">
       <object>objects\obj_bull</object>
       <object>objects\obj_bull_player</object>
-      <object>objects\obj_obstacle_manager</object>
-      <object>objects\obj_base_obstacle</object>
-      <object>objects\obj_jumpable_obstacle</object>
-      <object>objects\obj_unjumpable_obstacle</object>
-    </objects>
-    <objects name="Ox Fight B">
-      <object>objects\obj_bull_B</object>
+      <object>objects\obj_bull_stopper</object>
+      <object>objects\obj_bull_camera</object>
     </objects>
     <object>objects\obj_background</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_bull_B</room>
     <room>rooms\room_bull</room>
     <room>rooms\test_room</room>
   </rooms>
