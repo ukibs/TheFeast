@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>//Variables
-hspeed = 8;
+life = 3;
+max_speed = 8;
 stage = 1;
 stopped = false;
 </string>
@@ -53,6 +54,17 @@ stopped = false;
             <kind>1</kind>
             <string>//Cosa chorras
 
+
+//Aceleracion después de parar
+if(stopped == false &amp;&amp; hspeed &lt; max_speed)
+    hspeed ++;
+//Vida cuando se le puede golpear
+if(stopped == true &amp;&amp; life &lt;= 0){
+    stopped = false;
+    life = 3;
+    max_speed += 2;
+    stage ++;
+}
 </string>
           </argument>
         </arguments>
@@ -76,12 +88,43 @@ stopped = false;
           <argument>
             <kind>1</kind>
             <string>//Haremos que se estrelle y pare
+hspeed = 0;
+stopped = true;
+//Y que pare al prota
+obj_bull_player.hspeed = 0;
+//Y destruimos el obstáculo
+with(other) instance_destroy();
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_unjumpable_terrain">
+    <event eventtype="4" ename="obj_attack">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+if(stopped == true)
+    life --;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_jumpable_terrain">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -105,7 +148,7 @@ with(other) instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_jumpable_terrain">
+    <event eventtype="4" ename="obj_unjumpable_terrain">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -147,7 +190,8 @@ with(other) instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//Kill it
-other.health = 0;
+if(hspeed == max_speed)
+    other.health = 0;
 </string>
           </argument>
         </arguments>

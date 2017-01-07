@@ -43,6 +43,7 @@ distance_to_floor = 0;
 grounded = false;
 //Status variables
 status_still = false;
+status_dead = false;
 </string>
           </argument>
         </arguments>
@@ -81,7 +82,7 @@ key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3);
 key_action_4_pressed = gamepad_button_check_pressed(0, gp_face4);
 
 //If we are not locked...
-if(status_still == false){
+if(status_still == false &amp;&amp; status_dead == false){
     //Move the player
     h_direction = -key_left + key_right;
     v_direction = -key_up + key_down; 
@@ -115,8 +116,8 @@ if(status_still == false){
     //Acción de ataque
     if(key_action_1_pressed){
         attack = instance_create(x, y, obj_attack);
-        attack.direction = direction;
-        attack.image_angle = direction;
+        attack.direction = (image_xscale * -90) + 90;
+        attack.image_angle = attack.direction;
     }
     //Acción de salto
     if(key_action_2_pressed &amp;&amp; grounded == true){
@@ -145,34 +146,18 @@ if(status_still == false){
     //
     zsp = 0;
     //Control para no salir de la pantalla
-    x = clamp(x, sprite_width/2, room_width - sprite_width/2);
-    y = clamp(y, sprite_height/2, room_height - sprite_height/2);
+    x = clamp(x, view_xview + sprite_width/2, 
+                view_xview + view_wview - sprite_width/2);
+    y = clamp(y, view_yview + sprite_height/2, 
+                view_yview + view_hview - sprite_height/2);
 }
+//Control de muerte
+if(health &lt;= 0){
+    hspeed = 0;
+    status_dead = true;
+}
+
 //Ya meteremos cambio de sprite y demás
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_unjumpable_terrain">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//
-move_outside_solid(point_direction(other.x, other.y, x, y), 0);
 </string>
           </argument>
         </arguments>
@@ -198,6 +183,30 @@ move_outside_solid(point_direction(other.x, other.y, x, y), 0);
             <string>//En el caso de que se clave a pesar del control previo
 if(grounded == true)
     move_outside_solid(point_direction(other.x, other.y, x, y), 0);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_unjumpable_terrain">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+move_outside_solid(point_direction(other.x, other.y, x, y), 0);
 </string>
           </argument>
         </arguments>
