@@ -55,7 +55,6 @@
     <instance objName="obj_bull" x="0" y="352" name="inst_2D119022" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_obstacle_manager" x="320" y="32" name="inst_EA257831" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_terrain" x="2850" y="768" name="inst_201A8E0A" locked="0" code="" scaleX="132.199996948242" scaleY="-0.5" colour="4294967295" rotation="0"/>
-    <instance objName="obj_solid_terrain" x="2850" y="256" name="inst_57BE2F41" locked="0" code="" scaleX="132.199996948242" scaleY="-0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_background" x="736" y="0" name="inst_D4154AF7" locked="0" code="" scaleX="132.199996948242" scaleY="8" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_terrain" x="864" y="480" name="inst_50A4D951" locked="0" code="" scaleX="4.77419376373291" scaleY="6.78125" colour="4294967295" rotation="0"/>
     <instance objName="obj_solid_terrain" x="1120" y="672" name="inst_BA38864F" locked="0" code="" scaleX="3.25" scaleY="6.4193549156189" colour="4294967295" rotation="0"/>

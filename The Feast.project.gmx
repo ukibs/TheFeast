@@ -40,8 +40,8 @@
     <object>objects\obj_background</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_bull</room>
     <room>rooms\room_bull_B</room>
+    <room>rooms\room_bull</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>
