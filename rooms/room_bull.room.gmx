@@ -54,6 +54,50 @@
     <instance objName="obj_bull_player" x="640" y="512" name="inst_723D604A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bull" x="0" y="352" name="inst_2D119022" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_obstacle_manager" x="320" y="32" name="inst_EA257831" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2850" y="768" name="inst_201A8E0A" locked="0" code="" scaleX="132.199996948242" scaleY="-0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2850" y="256" name="inst_57BE2F41" locked="0" code="" scaleX="132.199996948242" scaleY="-0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_background" x="736" y="0" name="inst_D4154AF7" locked="0" code="" scaleX="132.199996948242" scaleY="8" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="864" y="480" name="inst_50A4D951" locked="0" code="" scaleX="4.77419376373291" scaleY="6.78125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1120" y="672" name="inst_BA38864F" locked="0" code="" scaleX="3.25" scaleY="6.4193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1344" y="480" name="inst_C32069B5" locked="0" code="" scaleX="3.03225803375244" scaleY="3.4375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1568" y="320" name="inst_6735041C" locked="0" code="" scaleX="4.90322589874268" scaleY="5.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1760" y="288" name="inst_37C04359" locked="0" code="" scaleX="7.375" scaleY="2.59375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1920" y="320" name="inst_4A1FE6AD" locked="0" code="" scaleX="3.87096762657166" scaleY="-4.4193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2080" y="352" name="inst_317C227E" locked="0" code="" scaleX="7.25" scaleY="6.4193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1728" y="480" name="inst_61F4039D" locked="0" code="" scaleX="0.774193525314331" scaleY="9.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1632" y="704" name="inst_D53E6FEC" locked="0" code="" scaleX="13.09375" scaleY="5.625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="1276" y="768" name="inst_21AA3BB6" locked="0" code="" scaleX="-9.96774196624756" scaleY="1.87096774578094" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2112" y="608" name="inst_8DEDB434" locked="0" code="" scaleX="1.5" scaleY="10.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2048" y="768" name="inst_768AE7FC" locked="0" code="" scaleX="13.5" scaleY="-1.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2496" y="384" name="inst_C857E190" locked="0" code="" scaleX="4.25" scaleY="3.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2496" y="672" name="inst_10FEE83A" locked="0" code="" scaleX="4.25" scaleY="7.45161294937134" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2656" y="736" name="inst_FB5A2E9F" locked="0" code="" scaleX="6.5" scaleY="3.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2784" y="384" name="inst_65297C12" locked="0" code="" scaleX="6.25" scaleY="3.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2944" y="416" name="inst_35A037F5" locked="0" code="" scaleX="5.5" scaleY="5.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="2976" y="544" name="inst_3F1A30FC" locked="0" code="" scaleX="3.5" scaleY="4.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3264" y="608" name="inst_4F175A7C" locked="0" code="" scaleX="7.5" scaleY="10.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3264" y="352" name="inst_62CAFEB8" locked="0" code="" scaleX="0.4375" scaleY="6.0625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3456" y="416" name="inst_68E702CD" locked="0" code="" scaleX="-0.78125" scaleY="10.03125" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3684" y="512" name="inst_51B33974" locked="0" code="" scaleX="0.625" scaleY="16.34375" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3936" y="352" name="inst_6C8A081F" locked="0" code="" scaleX="0.5" scaleY="5.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4224" y="352" name="inst_F1532ED2" locked="0" code="" scaleX="1.41935479640961" scaleY="5.625" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4128" y="672" name="inst_D49B6EC1" locked="0" code="" scaleX="-0.5" scaleY="6.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4064" y="512" name="inst_351F35AD" locked="0" code="" scaleX="12.25" scaleY="6.4193549156189" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3264" y="608" name="inst_3FBC7771" locked="0" code="" scaleX="7.5" scaleY="10.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="3520" y="672" name="inst_51B4BA1B" locked="0" code="" scaleX="10.125" scaleY="6.54838705062866" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4256" y="768" name="inst_522F1C5E" locked="0" code="" scaleX="2.5" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4320" y="736" name="inst_28BFF448" locked="0" code="" scaleX="3.0625" scaleY="2.87096762657166" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4384" y="736" name="inst_C293C9F3" locked="0" code="" scaleX="3.74193549156189" scaleY="3.93548393249512" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4704" y="672" name="inst_F304AFD2" locked="0" code="" scaleX="17.9032249450684" scaleY="7.5806450843811" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4544" y="288" name="inst_03395224" locked="0" code="" scaleX="6.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4736" y="288" name="inst_B7B0B20B" locked="0" code="" scaleX="5.93548393249512" scaleY="-1.8387097120285" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4896" y="256" name="inst_74D5EF7F" locked="0" code="" scaleX="4.5" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4672" y="544" name="inst_40075107" locked="0" code="" scaleX="1.5" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4704" y="512" name="inst_611BFF07" locked="0" code="" scaleX="1.5" scaleY="2.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4768" y="512" name="inst_13286647" locked="0" code="" scaleX="2.25" scaleY="4.35483884811401" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4800" y="480" name="inst_7800047D" locked="0" code="" scaleX="2.5" scaleY="4.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4864" y="480" name="inst_4AF6AC95" locked="0" code="" scaleX="2.25" scaleY="4.90322589874268" colour="4294967295" rotation="0"/>
+    <instance objName="obj_solid_terrain" x="4933" y="480" name="inst_75E7246E" locked="0" code="" scaleX="3.65625" scaleY="5.96875" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
