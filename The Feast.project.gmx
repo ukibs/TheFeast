@@ -17,6 +17,8 @@
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_background</sprite>
     <sprite>sprites\spr_bull_stopper</sprite>
+    <sprite>sprites\spr_flying_rock</sprite>
+    <sprite>sprites\spr_running_human</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -34,6 +36,8 @@
       <object>objects\obj_bull_player</object>
       <object>objects\obj_bull_stopper</object>
       <object>objects\obj_bull_camera</object>
+      <object>objects\obj_flying_rock</object>
+      <object>objects\obj_destructible_unjumpable_terrain</object>
     </objects>
     <object>objects\obj_background</object>
   </objects>

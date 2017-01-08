@@ -55,6 +55,9 @@ stopped = false;
             <string>//Cosa chorras
 
 
+//Deceleración después de chocar
+if(stopped == true &amp;&amp; hspeed &gt; 0)
+    hspeed --;
 //Aceleracion después de parar
 if(stopped == false &amp;&amp; hspeed &lt; max_speed)
     hspeed ++;
@@ -69,6 +72,31 @@ if(stopped == true &amp;&amp; life &lt;= 0){
         // Aqui controlaremos la muerte del boss
     }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_destructible_unjumpable_terrain">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Lo destruiremos, pero ya veremos
+instance_create(other.x, other.y, obj_flying_rock);
+with(other) instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -92,10 +120,14 @@ if(stopped == true &amp;&amp; life &lt;= 0){
           <argument>
             <kind>1</kind>
             <string>//Haremos que se estrelle y pare
-hspeed = 0;
 stopped = true;
-//Y que pare al prota
-obj_bull_player.hspeed = 0;
+//Genereamos unas cuantas rocas voladoras
+    //Ya revisaremos como las hacemos
+for(i = 0; i &lt; 10; i++){
+    originX = random_range(x, x + 200);
+    originY = random_range(200, 600);
+    instance_create(originX, originY, obj_flying_rock);
+}
 //Y destruimos el obstáculo
 with(other) instance_destroy();
 </string>
@@ -146,30 +178,7 @@ if(stopped == true)
           <argument>
             <kind>1</kind>
             <string>//Lo destruiremos, pero ya veremos
-with(other) instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_unjumpable_terrain">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Lo destruiremos, pero ya veremos
+instance_create(other.x, other.y, obj_flying_rock);
 with(other) instance_destroy();
 </string>
           </argument>
