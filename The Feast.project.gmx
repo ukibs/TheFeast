@@ -40,6 +40,7 @@
       <object>objects\obj_destructible_unjumpable_terrain</object>
     </objects>
     <object>objects\obj_background</object>
+    <object>objects\obj_pause</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_bull</room>

@@ -3,7 +3,7 @@
   <spriteName>spr_bullsy</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -68,6 +68,8 @@ if(stopped == true &amp;&amp; life &lt;= 0){
         life = 3;
         max_speed += 2;
         stage ++;
+        obj_bull_player.image_xscale = 1;
+        depth = -1;
     } else {
         // Aqui controlaremos la muerte del boss
     }
@@ -121,6 +123,7 @@ with(other) instance_destroy();
             <kind>1</kind>
             <string>//Haremos que se estrelle y pare
 stopped = true;
+depth = 0;
 //Genereamos unas cuantas rocas voladoras
     //Ya revisaremos como las hacemos
 for(i = 0; i &lt; 10; i++){

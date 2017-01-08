@@ -78,7 +78,7 @@ key_down = keyboard_check(vk_down) || gamepad_button_check(0,gp_padd);
     //Y dejar claro como funcionan
 key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_control);
 key_action_2_pressed = gamepad_button_check_pressed(0, gp_face2) || keyboard_check_pressed(vk_space);
-key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3);
+key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3) || keyboard_check_pressed(vk_enter);
 key_action_4_pressed = gamepad_button_check_pressed(0, gp_face4);
 
 //If we are not locked...
@@ -100,13 +100,21 @@ if(status_still == false &amp;&amp; status_dead == false){
     if(v_direction == 0 &amp;&amp; vsp != 0)
         vsp -= sign(vsp);
     //(To not) collide control
+        //Para los saltables
     if(grounded == true){
-        while(place_meeting(x + hsp, y, obj_solid_terrain) &amp;&amp; hsp != 0){
+        while(place_meeting(x + hsp, y, obj_jumpable_terrain) &amp;&amp; hsp != 0){
             hsp -= sign(hsp);
         }
-        while(place_meeting(x, y + vsp, obj_solid_terrain) &amp;&amp; vsp != 0){
+        while(place_meeting(x, y + vsp, obj_jumpable_terrain) &amp;&amp; vsp != 0){
             vsp -= sign(vsp);
         }
+    }
+        //Para los no saltables
+    while(place_meeting(x + hsp, y, obj_unjumpable_terrain) &amp;&amp; hsp != 0){
+        hsp -= sign(hsp);
+    }
+    while(place_meeting(x, y + vsp + distance_to_floor, obj_unjumpable_terrain) &amp;&amp; vsp != 0){
+        vsp -= sign(vsp);
     }
     //Control de horizonte
         //De momento con una altura fijada
@@ -155,6 +163,9 @@ if(status_still == false &amp;&amp; status_dead == false){
 if(health &lt;= 0){
     hspeed = 0;
     status_dead = true;
+    //De momento hacemos aqui que resetee si mueres
+    if(key_action_3_pressed)
+        room_restart();
 }
 
 //Ya meteremos cambio de sprite y demás
