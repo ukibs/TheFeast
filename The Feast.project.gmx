@@ -21,6 +21,7 @@
     <sprite>sprites\spr_flying_rock</sprite>
     <sprite>sprites\spr_running_human</sprite>
     <sprite>sprites\spr_floating_platform</sprite>
+    <sprite>sprites\spr_falling_platform</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
