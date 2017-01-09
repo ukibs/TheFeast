@@ -273,7 +273,10 @@ draw_set_alpha(1);
             <string>//Primero la sombra
 draw_sprite(spr_shadow, 0, x, y + distance_to_floor);
 //a si mismo
-draw_self();
+if(!status_dead)
+    draw_self();
+else
+    draw_sprite(spr_hooman_splash, 0, x, y);
 
 </string>
           </argument>

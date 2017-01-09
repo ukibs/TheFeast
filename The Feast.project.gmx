@@ -19,6 +19,7 @@
     <sprite>sprites\spr_bull_stopper</sprite>
     <sprite>sprites\spr_flying_rock</sprite>
     <sprite>sprites\spr_running_human</sprite>
+    <sprite>sprites\spr_floating_platform</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -41,8 +42,14 @@
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_pause</object>
+    <objects name="Bunny Fight">
+      <object>objects\obj_bunny_player</object>
+      <object>objects\obj_floating_platform</object>
+      <object>objects\obj_fall_killer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
     <room>rooms\test_room</room>
   </rooms>
