@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_solid_terrain</sprite>
+    <sprite>sprites\spr_bridge</sprite>
     <sprite>sprites\spr_solid_terrain_tall</sprite>
     <sprite>sprites\spr_hooman</sprite>
     <sprite>sprites\spr_hooman_splash</sprite>
@@ -45,6 +46,8 @@
     <objects name="Bunny Fight">
       <object>objects\obj_bunny_player</object>
       <object>objects\obj_floating_platform</object>
+      <object>objects\obj_falling_platform</object>
+      <object>objects\obj_bridge</object>
       <object>objects\obj_fall_killer</object>
     </objects>
   </objects>
