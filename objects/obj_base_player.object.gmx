@@ -156,8 +156,8 @@ if(status_still == false &amp;&amp; status_dead == false){
     //Control para no salir de la pantalla
     x = clamp(x, view_xview + sprite_width/2, 
                 view_xview + view_wview - sprite_width/2);
-    y = clamp(y, view_yview + sprite_height/2, 
-                view_yview + view_hview - sprite_height/2);
+    //y = clamp(y, view_yview + sprite_height/2, 
+     //           view_yview + view_hview - sprite_height/2);
 }
 //Control de muerte
 if(health &lt;= 0){

@@ -54,7 +54,47 @@ jumpspeed = 20;
 //Que caiga al vacio si no está sobre una plataforma
 if(grounded &amp;&amp; !place_meeting(x, y, obj_floating_platform)){
     vspeed = 10;
+    status_still = true;
 }
+//Que se acumule produndidad si nos despeñamos
+if(status_still == true){
+    distance_to_floor -= vspeed;
+    //Y que te mate con eso
+    if(distance_to_floor &lt; -100)
+        health = 0;
+}
+//Hacemos la profundidad asi en este escenario
+depth = -y - distance_to_floor;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Primero la sombra
+if(place_meeting(x, y + distance_to_floor, obj_floating_platform))
+    draw_sprite(spr_shadow, 0, x, y + distance_to_floor);
+//a si mismo
+if(!status_dead)
+    draw_self();
+else
+    draw_sprite(spr_hooman_splash, 0, x, y);
 </string>
           </argument>
         </arguments>
