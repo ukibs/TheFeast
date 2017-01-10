@@ -23,6 +23,7 @@
     <sprite>sprites\spr_running_human</sprite>
     <sprite>sprites\spr_floating_platform</sprite>
     <sprite>sprites\spr_falling_platform</sprite>
+    <sprite>sprites\spr_bunny</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -52,11 +53,12 @@
       <object>objects\obj_falling_platform</object>
       <object>objects\obj_bridge</object>
       <object>objects\obj_fall_killer</object>
+      <object>objects\obj_bunny</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_bull</room>
     <room>rooms\room_rabbit</room>
+    <room>rooms\room_bull</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>
