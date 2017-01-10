@@ -24,6 +24,7 @@
     <sprite>sprites\spr_floating_platform</sprite>
     <sprite>sprites\spr_falling_platform</sprite>
     <sprite>sprites\spr_bunny</sprite>
+    <sprite>sprites\spr_fireball</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -57,8 +58,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
+    <room>rooms\room_rabbit</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>
