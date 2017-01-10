@@ -14,6 +14,7 @@
     <sprite>sprites\spr_hooman_splash</sprite>
     <sprite>sprites\spr_attack</sprite>
     <sprite>sprites\spr_shadow</sprite>
+    <sprite>sprites\spr_bullsy_leg</sprite>
     <sprite>sprites\spr_bullsy</sprite>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_background</sprite>
@@ -41,6 +42,7 @@
       <object>objects\obj_bull_camera</object>
       <object>objects\obj_flying_rock</object>
       <object>objects\obj_destructible_unjumpable_terrain</object>
+      <object>objects\obj_bull_leg</object>
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_pause</object>
@@ -53,8 +55,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
+    <room>rooms\room_rabbit</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>

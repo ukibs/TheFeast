@@ -30,6 +30,7 @@ life = 3;
 max_speed = 8;
 stage = 1;
 stopped = false;
+rotating_direction = 1;
 </string>
           </argument>
         </arguments>
@@ -53,14 +54,18 @@ stopped = false;
           <argument>
             <kind>1</kind>
             <string>//Cosa chorras
-
-
+    //Cambio de angulo de imagen
+if(abs(image_angle + rotating_direction) &gt; 15)
+    rotating_direction *= -1;
+    //Rotacion de imagen
+if(stopped == false)
+    image_angle += rotating_direction;
 //Deceleración después de chocar
 if(stopped == true &amp;&amp; hspeed &gt; 0)
     hspeed --;
 //Aceleracion después de parar
 if(stopped == false &amp;&amp; hspeed &lt; max_speed)
-    hspeed ++;
+    hspeed += 0.25;
 //Vida cuando se le puede golpear
 if(stopped == true &amp;&amp; life &lt;= 0){
     if (stage&lt;3){
@@ -156,8 +161,10 @@ with(other) instance_destroy();
           <argument>
             <kind>1</kind>
             <string>//
-if(stopped == true)
+if(stopped == true &amp;&amp; other.triggered == false){
     life --;
+    other.triggered = true;
+}
 </string>
           </argument>
         </arguments>

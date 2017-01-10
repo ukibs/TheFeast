@@ -90,7 +90,7 @@ if(height &lt;= 0){
             <string>//Comparamos alturas de ambos para ver si se "tocan"
     //Margén editable
 if(abs(other.distance_to_floor - height) &lt; 10){
-    other.health -= 10;
+    other.health -= 25;
     other.hspeed = 0;
     instance_destroy();
 }

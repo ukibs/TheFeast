@@ -112,6 +112,8 @@
     <instance objName="obj_bull_stopper" x="8928" y="0" name="inst_ED092096" locked="0" code="" scaleX="4" scaleY="30" colour="4294967295" rotation="0"/>
     <instance objName="obj_unjumpable_terrain" x="6976" y="608" name="inst_18E3B8DD" locked="0" code="" scaleX="125" scaleY="11" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="320" y="288" name="inst_68FC801E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bull_leg" x="0" y="480" name="inst_7931F6CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bull_leg" x="32" y="416" name="inst_3679C014" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
