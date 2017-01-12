@@ -163,6 +163,8 @@ if(status_still == false &amp;&amp; status_dead == false){
 if(health &lt;= 0){
     hspeed = 0;
     status_dead = true;
+    //
+    obj_fade_black.fadeIn = false;
     //De momento hacemos aqui que resetee si mueres
     if(key_action_3_pressed)
         room_restart();

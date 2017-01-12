@@ -69,6 +69,7 @@
     <instance objName="obj_falling_platform" x="960" y="352" name="inst_0EDB3B67" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_falling_platform" x="896" y="1664" name="inst_1550A29B" locked="0" code="" scaleX="0.800000011920929" scaleY="0.800000011920929" colour="4294967295" rotation="0"/>
     <instance objName="obj_bunny" x="672" y="416" name="inst_6CF454E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_fade_black" x="32" y="32" name="inst_F527AEF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
