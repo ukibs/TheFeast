@@ -253,10 +253,7 @@ move_outside_solid(point_direction(other.x, other.y, x, y), 0);
 //draw_text(10, 10, distance_to_floor);
 //draw_text(10, 30, falling_speed);
 
-//Y el daño
-draw_set_alpha(1 - health/100);
-draw_sprite(spr_damage, 0, 0, 0);
-draw_set_alpha(1);
+
 </string>
           </argument>
         </arguments>
@@ -287,6 +284,10 @@ if(!status_dead)
 else
     draw_sprite(spr_hooman_splash, 0, x, y);
 
+//Y el daño
+draw_set_alpha(1 - health/100);
+draw_sprite(spr_damage, 0, view_xview, view_yview);
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>

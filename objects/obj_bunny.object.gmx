@@ -26,11 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>//
+status = 0;
 stage = 0;
 distance_to_floor = 0;
 grav = 0;
 jumping = false;
 ascending = false;
+returning = true;
 
 //Variables de salto
 jumpspeed = 50;
@@ -41,6 +43,31 @@ distance_to_objective = 0;
 distance_done = 0;
 steps_to_do = 0;
 steps_done = 0; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+returning = true;
+ascending = true;
 </string>
           </argument>
         </arguments>
@@ -66,8 +93,8 @@ steps_done = 0;
             <string>//Haremos que salte cuando acabe la alarma
 objective_platform = instance_nearest(obj_bunny_player.x, 
                         obj_bunny_player.y, obj_falling_platform);
-destination_x = objective_platform.x + objective_platform.sprite_width/2;
-destination_y = objective_platform.y + objective_platform.sprite_height/2;
+destination_x = objective_platform.x/* + objective_platform.sprite_width/2*/;
+destination_y = objective_platform.y/* + objective_platform.sprite_height/2*/;
 distance_to_objective = distance_to_point(destination_x, destination_y);
 //direction = point_direction(x, y, destination_x, destination_y);
 //speed = hJumpspeed;
@@ -100,13 +127,15 @@ ascending = true;
           <argument>
             <kind>1</kind>
             <string>//
-switch(stage){
+switch(status){
+    //Esperando al prota
     case 0:
         if(obj_bunny_player.y &lt; 864){
-            stage = 1;
+            status = 1;
             alarm_set(0, 30);
         }
     break;
+    //Saltando
     case 1:
         //Salto recto, más cómodo
         if(jumping == true){
@@ -132,11 +161,39 @@ switch(stage){
             }
         }
     break;
+    //Volviendo a subir
+    case 2:
+        if(returning == true){
+            if(ascending == true){
+                y -= jumpspeed;
+                distance_to_floor += jumpspeed;
+                if(distance_to_floor &gt;= 1000){
+                    ascending = false;
+                }  
+            }   
+            else{
+                y += jumpspeed;
+                distance_to_floor -= jumpspeed;
+                if(distance_to_floor &lt;= 0){
+                    alarm_set(0, 30);
+                    status = 1;
+                }
+            } 
+        }
+    break;
 }
 
 //Controlamos que se escone
-if(distance_to_floor &lt;= -100){
-    //Luego pongo codigo aqui para siguiente fase
+if(distance_to_floor &lt;= -500){
+    if(stage &lt; 2){
+        stage ++;
+        status = 2;
+        obj_falling_platform.again = true;
+        alarm_set(1, 150);
+    }
+    else{
+        obj_fade_white.fadeIn = true;
+    }
 }
 </string>
           </argument>

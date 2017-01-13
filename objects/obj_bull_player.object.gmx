@@ -90,6 +90,7 @@ if(h_direction != 0 &amp;&amp; obj_bull.stopped = true)
             <kind>1</kind>
             <string>//
 if(grounded == true){
+    health -= 10;
     move_outside_all(0, 0);
 }
 </string>

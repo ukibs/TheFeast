@@ -30,6 +30,8 @@ triggered = false;
 falling = false;
 falled_height = 0;
 original_y = y;
+again = false;
+ascending = false;
 </string>
           </argument>
         </arguments>
@@ -79,6 +81,7 @@ falling = true;
             <string>//
 if(falling == true){
     vspeed ++;
+    falled_height += vspeed;
 }
 
 //Cuando "cae" la plataforma la dejamos fuera para futuro uso
@@ -87,6 +90,25 @@ if(vspeed &gt;= 20){
     vspeed = 0;
     falling = false;
     triggered = false;
+}
+
+//
+if(again == true){
+    if(x &gt; 2000)
+        x -= 2000;
+    ascending = true;
+    again = false;
+    vspeed = -5;
+}
+
+//
+if(ascending == true){
+    falled_height += vspeed;
+    if(falled_height &lt;= 0){
+        vspeed = 0;
+        ascending = false;
+        sprite_index = spr_floating_platform;
+    }
 }
 </string>
           </argument>
@@ -111,7 +133,7 @@ if(vspeed &gt;= 20){
           <argument>
             <kind>1</kind>
             <string>//
-if(triggered == false &amp;&amp; other.grounded == true){
+if(triggered == false &amp;&amp; other.grounded == true &amp;&amp; obj_bunny.status != 2){
     triggered = true;
     //Alarma de tembleque
     alarm_set(0, 1);

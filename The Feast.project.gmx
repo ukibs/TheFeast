@@ -30,6 +30,7 @@
       <sprite>sprites\spr_falling_platform</sprite>
       <sprite>sprites\spr_floating_platform</sprite>
     </sprites>
+    <sprite>sprites\spr_ox_background</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ox</background>
@@ -54,6 +55,7 @@
       <object>objects\obj_flying_rock</object>
       <object>objects\obj_destructible_unjumpable_terrain</object>
       <object>objects\obj_bull_leg</object>
+      <object>objects\obj_ox_background_putter</object>
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_pause</object>
