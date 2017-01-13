@@ -29,9 +29,12 @@
 stage = 0;
 distance_to_floor = 0;
 grav = 0;
+jumping = false;
+ascending = false;
 
 //Variables de salto
-hJumpspeed = 20;
+jumpspeed = 50;
+hJumpspeed = 15;
 destination_x = 0;
 destination_y = 0;
 distance_to_objective = 0;
@@ -63,13 +66,17 @@ steps_done = 0;
             <string>//Haremos que salte cuando acabe la alarma
 objective_platform = instance_nearest(obj_bunny_player.x, 
                         obj_bunny_player.y, obj_falling_platform);
-destination_x = objective_platform.x;
-destination_y = objective_platform.y;
+destination_x = objective_platform.x + objective_platform.sprite_width/2;
+destination_y = objective_platform.y + objective_platform.sprite_height/2;
 distance_to_objective = distance_to_point(destination_x, destination_y);
-direction = point_direction(x, y, destination_x, destination_y);
-speed = hJumpspeed;
-steps_to_do = distance_to_objective / speed;
-steps_done = 0;  
+//direction = point_direction(x, y, destination_x, destination_y);
+//speed = hJumpspeed;
+//steps_to_do = distance_to_objective / hJumpspeed;
+//steps_done = 0;  
+
+
+jumping = true;
+ascending = true;
 </string>
           </argument>
         </arguments>
@@ -101,21 +108,61 @@ switch(stage){
         }
     break;
     case 1:
-        //Make an ascendent and descendent arc
-        if(speed &gt; 0){
-            y += (steps_done - steps_to_do/2)/2;
-            distance_to_floor -= (steps_done - steps_to_do/2)/2;
-            //Update de distance done
-            distance_done += speed;
-            steps_done ++;
-        }
-        //Stop it when "falling" in the objective place
-        if(steps_done &gt;= steps_to_do){
-            speed = 0;
-            alarm_set(0, 30);
+        //Salto recto, más cómodo
+        if(jumping == true){
+            if(ascending == true){
+                y -= jumpspeed;
+                distance_to_floor += jumpspeed;
+                if(distance_to_floor &gt;= 1000){
+                    ascending = false;
+                    x = destination_x;
+                    y = destination_y - distance_to_floor;
+                }
+            }
+            else{
+                y += jumpspeed;
+                distance_to_floor -= jumpspeed;
+                if(distance_to_floor &lt;= 0){
+                    if(place_meeting(x, y, obj_falling_platform)){
+                        jumping = false;
+                        alarm_set(0, 30);
+                    }
+                    //En caso contrario simplemente cae
+                }
+            }
         }
     break;
 }
+
+//Controlamos que se escone
+if(distance_to_floor &lt;= -100){
+    //Luego pongo codigo aqui para siguiente fase
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+draw_text(10, 10, steps_done);
+draw_text(10, 30, steps_to_do);
 </string>
           </argument>
         </arguments>
@@ -143,6 +190,9 @@ draw_sprite(spr_shadow, 0, x, y + distance_to_floor);
 
 //
 draw_self();
+
+//Vamos a dibujar a ver que toma como objetivo
+draw_sprite(spr_shadow, 0, destination_x, destination_y);
 </string>
           </argument>
         </arguments>

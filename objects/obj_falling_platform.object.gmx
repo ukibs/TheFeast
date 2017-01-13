@@ -116,7 +116,7 @@ if(triggered == false &amp;&amp; other.grounded == true){
     //Alarma de tembleque
     alarm_set(0, 1);
     //Alarma de caida
-    alarm_set(1, 60);
+    alarm_set(1, 90);
     sprite_index = spr_falling_platform;
 }
 </string>
