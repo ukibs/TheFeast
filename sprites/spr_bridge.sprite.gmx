@@ -8,17 +8,17 @@
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>1365</bbox_right>
+  <bbox_right>1423</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>49</bbox_bottom>
+  <bbox_bottom>389</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>1366</width>
-  <height>50</height>
+  <width>1424</width>
+  <height>390</height>
   <frames>
     <frame index="0">images\spr_bridge_0.png</frame>
   </frames>

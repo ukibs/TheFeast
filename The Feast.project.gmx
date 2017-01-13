@@ -29,6 +29,7 @@
       <sprite>sprites\spr_bunny</sprite>
       <sprite>sprites\spr_falling_platform</sprite>
       <sprite>sprites\spr_floating_platform</sprite>
+      <sprite>sprites\spr_meteor</sprite>
     </sprites>
     <sprite>sprites\spr_ox_background</sprite>
   </sprites>
@@ -64,6 +65,7 @@
       <object>objects\obj_floating_platform</object>
       <object>objects\obj_falling_platform</object>
       <object>objects\obj_bridge</object>
+      <object>objects\obj_start</object>
       <object>objects\obj_fall_killer</object>
       <object>objects\obj_bunny</object>
       <object>objects\obj_bunny_camera</object>
