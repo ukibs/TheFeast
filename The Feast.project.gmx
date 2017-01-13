@@ -74,8 +74,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
+    <room>rooms\room_rabbit</room>
     <room>rooms\room_main_menu</room>
     <room>rooms\room_level_selection</room>
     <room>rooms\test_room</room>

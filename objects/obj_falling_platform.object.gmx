@@ -29,6 +29,7 @@
 triggered = false;
 falling = false;
 falled_height = 0;
+original_y = y;
 </string>
           </argument>
         </arguments>
@@ -80,9 +81,13 @@ if(falling == true){
     vspeed ++;
 }
 
-//
-if(vspeed &gt;= 20)
-    instance_destroy();
+//Cuando "cae" la plataforma la dejamos fuera para futuro uso
+if(vspeed &gt;= 20){
+    x += 2000;
+    vspeed = 0;
+    falling = false;
+    triggered = false;
+}
 </string>
           </argument>
         </arguments>
@@ -106,12 +111,13 @@ if(vspeed &gt;= 20)
           <argument>
             <kind>1</kind>
             <string>//
-if(triggered == false){
+if(triggered == false &amp;&amp; other.grounded == true){
     triggered = true;
     //Alarma de tembleque
     alarm_set(0, 1);
     //Alarma de caida
     alarm_set(1, 60);
+    sprite_index = spr_falling_platform;
 }
 </string>
           </argument>
