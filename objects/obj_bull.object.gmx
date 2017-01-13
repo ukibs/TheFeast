@@ -55,11 +55,15 @@ rotating_direction = 1;
             <kind>1</kind>
             <string>//Cosa chorras
     //Cambio de angulo de imagen
-if(abs(image_angle + rotating_direction) &gt; 15)
+/*if(abs(image_angle + rotating_direction) &gt; 15)
     rotating_direction *= -1;
     //Rotacion de imagen
 if(stopped == false)
-    image_angle += rotating_direction;
+    image_angle += rotating_direction;*/
+//Paramos la animacion cuando choca
+if(stopped == true){
+    image_index = 0;
+}
 //Deceleración después de chocar
 if(stopped == true &amp;&amp; hspeed &gt; 0)
     hspeed --;

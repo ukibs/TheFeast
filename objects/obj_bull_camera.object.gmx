@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Comprobación de seguridad
 if(instance_exists(obj_bull)){
-    x = obj_bull.x + (view_wview/2);
+    x = obj_bull.x + (view_wview/2) + obj_bull.hspeed;
 }
 </string>
           </argument>

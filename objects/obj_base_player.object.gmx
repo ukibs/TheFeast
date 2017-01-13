@@ -110,7 +110,7 @@ if(status_still == false &amp;&amp; status_dead == false){
         }
     }
         //Para los no saltables
-    while(place_meeting(x + hsp, y, obj_unjumpable_terrain) &amp;&amp; hsp != 0){
+    while(place_meeting(x + hsp, y + distance_to_floor, obj_unjumpable_terrain) &amp;&amp; hsp != 0){
         hsp -= sign(hsp);
     }
     while(place_meeting(x, y + vsp + distance_to_floor, obj_unjumpable_terrain) &amp;&amp; vsp != 0){
@@ -171,6 +171,12 @@ if(health &lt;= 0){
 }
 
 //Ya meteremos cambio de sprite y demás
+if(hspeed != 0 || hsp != 0){
+    sprite_index = spr_player_runnig;
+}
+else{
+    sprite_index = spr_player_test;
+}
 </string>
           </argument>
         </arguments>
@@ -194,6 +200,7 @@ if(health &lt;= 0){
           <argument>
             <kind>1</kind>
             <string>//En el caso de que se clave a pesar del control previo
+    //Podríamos hacer que te quite vida
 if(grounded == true)
     move_outside_solid(point_direction(other.x, other.y, x, y), 0);
 </string>

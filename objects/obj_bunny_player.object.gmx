@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 //De momento vamos a usar una diferente para esta
-jumpspeed = 20;
+jumpspeed = 15;
 </string>
           </argument>
         </arguments>
@@ -65,6 +65,9 @@ if(status_still == true){
 }
 //Hacemos la profundidad asi en este escenario
 depth = -y - distance_to_floor;
+//Giro 
+if(h_direction != 0)
+    image_xscale = h_direction;
 </string>
           </argument>
         </arguments>

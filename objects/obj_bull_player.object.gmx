@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 //
+jumpspeed = 15;
 hspeed = 8;
 </string>
           </argument>
@@ -58,7 +59,7 @@ if(hspeed &lt; obj_bull.hspeed)
 if(hspeed &gt; obj_bull.hspeed)
     hspeed --;
 //Comprobación para que no se clave en el terreno
-if(place_meeting(x + hspeed, y, obj_solid_terrain)){
+if(place_meeting(x + hspeed, y + distance_to_floor, obj_solid_terrain)){
     hspeed = 0;
 }
 
