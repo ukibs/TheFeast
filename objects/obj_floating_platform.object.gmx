@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Hacemos la profundidad asi en este escenario
     //Para las que se caen hacerlo en el step
-depth = -y;
+depth = room_height - y;
 </string>
           </argument>
         </arguments>
