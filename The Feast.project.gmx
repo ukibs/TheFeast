@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player_test</sprite>
+    <sprite>sprites\spr_player_runnig</sprite>
     <sprite>sprites\spr_solid_terrain</sprite>
     <sprite>sprites\spr_bridge</sprite>
     <sprite>sprites\spr_solid_terrain_tall</sprite>
@@ -32,6 +33,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ox</background>
+    <background>background\bg_rabbit</background>
     <background>background\bg_level_selection</background>
   </backgrounds>
   <paths name="paths"/>
@@ -71,10 +73,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
     <room>rooms\room_main_menu</room>
     <room>rooms\room_level_selection</room>
-    <room>rooms\room_rabbit</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>

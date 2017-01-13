@@ -70,9 +70,8 @@
     <instance objName="obj_jumpable_terrain" x="6496" y="352" name="inst_C19B96FB" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpable_terrain" x="7104" y="352" name="inst_4F0D401F" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpable_terrain" x="7456" y="352" name="inst_94E1F141" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
-    <instance objName="obj_jumpable_terrain" x="7680" y="352" name="inst_7623969F" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpable_terrain" x="7968" y="352" name="inst_2FFD8107" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
-    <instance objName="obj_jumpable_terrain" x="8480" y="352" name="inst_F4D00455" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
+    <instance objName="obj_jumpable_terrain" x="8384" y="352" name="inst_F4D00455" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpable_terrain" x="8640" y="352" name="inst_E4398B94" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_jumpable_terrain" x="8928" y="352" name="inst_6354C215" locked="0" code="" scaleX="-0.75" scaleY="6.75" colour="4294967295" rotation="0"/>
     <instance objName="obj_destructible_unjumpable_terrain" x="5344" y="256" name="inst_7E58EC38" locked="0" code="" scaleX="4.25" scaleY="4.90000009536743" colour="4294967295" rotation="0"/>
