@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>event_inherited();
+//
 triggered = false;
 falling = false;
 falled_height = 0;

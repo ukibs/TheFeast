@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>//
-draw_sprite(spr_ox_background, 0, 0, 0);
+draw_sprite(spr_ox_background_pieces, 0, 0, 0);
+draw_sprite(spr_ox_background_pieces, 1, 2048, 0);
+draw_sprite(spr_ox_background_pieces, 2, 2048*2, 0);
+draw_sprite(spr_ox_background_pieces, 3, 2048*3, 0);
+draw_sprite(spr_ox_background_pieces, 4, 2048*4, 0);
 </string>
           </argument>
         </arguments>

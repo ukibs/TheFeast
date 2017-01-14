@@ -67,7 +67,7 @@ if(pause_button){
 //
 if(paused &amp;&amp; confirm_button){
         //Esta cuando la tengamos
-    //room_goto(room_level_selection);
+    room_goto(room_level_selection);
 }
 </string>
           </argument>

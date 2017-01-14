@@ -15,10 +15,12 @@
     <sprite>sprites\spr_hooman_splash</sprite>
     <sprite>sprites\spr_attack</sprite>
     <sprite>sprites\spr_shadow</sprite>
+    <sprite>sprites\spr_big_shadow</sprite>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_background</sprite>
     <sprite>sprites\spr_running_human</sprite>
     <sprites name="Ox_Fight">
+      <sprite>sprites\spr_ox_background_pieces</sprite>
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_bullsy</sprite>
       <sprite>sprites\spr_bullsy_leg</sprite>
@@ -30,8 +32,16 @@
       <sprite>sprites\spr_falling_platform</sprite>
       <sprite>sprites\spr_floating_platform</sprite>
       <sprite>sprites\spr_meteor</sprite>
+      <sprite>sprites\spr_bunny_jumping</sprite>
     </sprites>
     <sprite>sprites\spr_ox_background</sprite>
+    <sprites name="Level Selection">
+      <sprite>sprites\spr_inacctive_button_ox</sprite>
+      <sprite>sprites\spr_inacctive_button_rabbit</sprite>
+      <sprite>sprites\spr_active_button_rabit</sprite>
+      <sprite>sprites\spr_selection_void</sprite>
+      <sprite>sprites\spr_active_button_ox</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ox</background>
@@ -76,12 +86,18 @@
       <object>objects\obj_fade_black</object>
       <object>objects\obj_fade_white</object>
     </objects>
+    <objects name="Level Selection">
+      <object>objects\obj_ox_button</object>
+      <object>objects\obj_bunny_button</object>
+      <object>objects\obj_ls_manager</object>
+      <object>objects\obj_void_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_level_selection</room>
     <room>rooms\room_rabbit</room>
     <room>rooms\room_bull</room>
     <room>rooms\room_main_menu</room>
-    <room>rooms\room_level_selection</room>
     <room>rooms\test_room</room>
   </rooms>
   <help>

@@ -44,6 +44,8 @@ grounded = false;
 //Status variables
 status_still = false;
 status_dead = false;
+//
+gamepad_set_axis_deadzone(0,0.7);
 </string>
           </argument>
         </arguments>
@@ -69,15 +71,15 @@ status_dead = false;
             <string>//Get the keys
     //Movement keys
     //Falta meter joystick
-key_left = keyboard_check(vk_left) || gamepad_button_check(0,gp_padl);
-key_right = keyboard_check(vk_right) || gamepad_button_check(0,gp_padr);
-key_up = keyboard_check(vk_up) || gamepad_button_check(0,gp_padu);
-key_down = keyboard_check(vk_down) || gamepad_button_check(0,gp_padd);
+key_left = gamepad_axis_value(0,gp_axislh) &lt; 0 || keyboard_check(vk_left) || gamepad_button_check(0,gp_padl);
+key_right = gamepad_axis_value(0,gp_axislh) &gt; 0 || keyboard_check(vk_right) || gamepad_button_check(0,gp_padr);
+key_up = gamepad_axis_value(0,gp_axislv) &lt; 0 || keyboard_check(vk_up) || gamepad_button_check(0,gp_padu);
+key_down = gamepad_axis_value(0,gp_axislv) &gt; 0 || keyboard_check(vk_down) || gamepad_button_check(0,gp_padd);
     //Action keys
     //Falta meter teclas
     //Y dejar claro como funcionan
-key_action_1_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_control);
-key_action_2_pressed = gamepad_button_check_pressed(0, gp_face2) || keyboard_check_pressed(vk_space);
+key_action_1_pressed = gamepad_button_check_pressed(0, gp_face2) || keyboard_check_pressed(vk_control);
+key_action_2_pressed = gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_space);
 key_action_3_pressed = gamepad_button_check_pressed(0, gp_face3) || keyboard_check_pressed(vk_enter);
 key_action_4_pressed = gamepad_button_check_pressed(0, gp_face4);
 
@@ -122,11 +124,11 @@ if(status_still == false &amp;&amp; status_dead == false){
         vsp += 1;
     }
     //Acción de ataque
-    if(key_action_1_pressed){
+    /*if(key_action_1_pressed){
         attack = instance_create(x, y, obj_attack);
         attack.direction = (image_xscale * -90) + 90;
         attack.image_angle = attack.direction;
-    }
+    }*/
     //Acción de salto
     if(key_action_2_pressed &amp;&amp; grounded == true){
         grounded = false;
