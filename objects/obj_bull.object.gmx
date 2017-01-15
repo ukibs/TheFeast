@@ -179,8 +179,8 @@ with(other) instance_destroy();
 alarm_set(0, 60);
 
 //Apaño de cierre
-if(stage &gt; 2){
-    obj_fade_white.fadeIn = true;
+if(stage == 2){
+    obj_fade_white.fadeIn = false;
 }
 </string>
           </argument>

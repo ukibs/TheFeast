@@ -33,6 +33,7 @@ falled_height = 0;
 original_y = y;
 again = false;
 ascending = false;
+broken = false;
 </string>
           </argument>
         </arguments>
@@ -56,7 +57,13 @@ ascending = false;
           <argument>
             <kind>1</kind>
             <string>//
-falling = true;
+if(broken == false){
+    broken = true;
+    sprite_index = spr_broken_platform;
+    alarm_set(1, 30);
+}
+else
+    falling = true;
 </string>
           </argument>
         </arguments>
@@ -139,7 +146,7 @@ if(triggered == false &amp;&amp; other.grounded == true &amp;&amp; obj_bunny.sta
     //Alarma de tembleque
     alarm_set(0, 1);
     //Alarma de caida
-    alarm_set(1, 90);
+    alarm_set(1, 60);
     sprite_index = spr_falling_platform;
 }
 </string>

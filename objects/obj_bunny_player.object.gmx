@@ -63,11 +63,46 @@ if(status_still == true){
     if(distance_to_floor &lt; -100)
         health = 0;
 }
+//Para que no pueda ocupar el mismo espacio que el conejo
+while(place_meeting(x + hsp, y + distance_to_floor + obj_bunny.distance_to_floor, 
+        obj_bunny) &amp;&amp; hsp != 0){
+    hsp -= sign(hsp);
+}
+while(place_meeting(x, y + vsp + distance_to_floor + obj_bunny.distance_to_floor, 
+        obj_bunny) &amp;&amp; vsp != 0){
+    vsp -= sign(vsp);
+}
 //Hacemos la profundidad asi en este escenario
 depth = -y - distance_to_floor;
 //Giro 
 if(h_direction != 0)
     image_xscale = h_direction;
+//
+depth = room_height - y - distance_to_floor;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
+//draw_text(10, 30, distance_to_floor);
 </string>
           </argument>
         </arguments>

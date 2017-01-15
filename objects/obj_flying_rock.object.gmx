@@ -30,7 +30,7 @@
 height = 1;
 distance_done = 0;
     //Cuanto más alto (bajo) más lejos llegará
-descending_speed = -(irandom_range(10, 30));
+descending_speed = -(irandom_range(20, 60));
     //La adaptamos a la del toro
 hspeed = obj_bull.hspeed * 2;
 </string>

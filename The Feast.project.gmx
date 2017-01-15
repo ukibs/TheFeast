@@ -21,11 +21,28 @@
     <sprite>sprites\spr_running_human</sprite>
     <sprites name="Ox_Fight">
       <sprite>sprites\spr_ox_background_pieces</sprite>
+      <sprite>sprites\spr_ox_bg_clean</sprite>
       <sprite>sprites\spr_fireball</sprite>
       <sprite>sprites\spr_bullsy</sprite>
       <sprite>sprites\spr_bullsy_leg</sprite>
       <sprite>sprites\spr_bull_stopper</sprite>
       <sprite>sprites\spr_flying_rock</sprite>
+      <sprite>sprites\spr_tunnel_entrance</sprite>
+      <sprites name="obstacles">
+        <sprite>sprites\spr_obstacle_01</sprite>
+        <sprite>sprites\spr_obstacle_02</sprite>
+        <sprite>sprites\spr_obstacle_03</sprite>
+        <sprite>sprites\spr_obstacle_04</sprite>
+        <sprite>sprites\spr_obstacle_05</sprite>
+        <sprite>sprites\spr_obstacle_06</sprite>
+        <sprite>sprites\spr_obstacle_07</sprite>
+        <sprite>sprites\spr_obstacle_08</sprite>
+        <sprite>sprites\spr_obstacle_09</sprite>
+        <sprite>sprites\spr_obstacle_10</sprite>
+        <sprite>sprites\spr_obstacle_11</sprite>
+        <sprite>sprites\spr_rockWall</sprite>
+        <sprite>sprites\spr_fireWall</sprite>
+      </sprites>
     </sprites>
     <sprites name="Bunny_Fight">
       <sprite>sprites\spr_bunny</sprite>
@@ -33,6 +50,7 @@
       <sprite>sprites\spr_floating_platform</sprite>
       <sprite>sprites\spr_meteor</sprite>
       <sprite>sprites\spr_bunny_jumping</sprite>
+      <sprite>sprites\spr_broken_platform</sprite>
     </sprites>
     <sprite>sprites\spr_ox_background</sprite>
     <sprites name="Level Selection">
@@ -42,11 +60,13 @@
       <sprite>sprites\spr_selection_void</sprite>
       <sprite>sprites\spr_active_button_ox</sprite>
     </sprites>
+    <sprite>sprites\sprite32</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ox</background>
     <background>background\bg_rabbit</background>
     <background>background\bg_level_selection</background>
+    <background>background\bg_Ox_clean</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -67,6 +87,22 @@
       <object>objects\obj_destructible_unjumpable_terrain</object>
       <object>objects\obj_bull_leg</object>
       <object>objects\obj_ox_background_putter</object>
+      <object>objects\obj_running_hooman</object>
+      <objects name="obstacles">
+        <object>objects\obj_unjumpable_01</object>
+        <object>objects\obj_unjumpable_02</object>
+        <object>objects\obj_unjumpable_03</object>
+        <object>objects\obj_unjumpable_04</object>
+        <object>objects\obj_unjumpable_05</object>
+        <object>objects\obj_unjumpable_06</object>
+        <object>objects\obj_unjumpable_07</object>
+        <object>objects\obj_unjumpable_08</object>
+        <object>objects\obj_unjumpable_09</object>
+        <object>objects\obj_unjumpable_10</object>
+        <object>objects\obj_unjumpable_11</object>
+        <object>objects\obj_jumpable_01</object>
+        <object>objects\obj_jumpable_02</object>
+      </objects>
     </objects>
     <object>objects\obj_background</object>
     <object>objects\obj_pause</object>

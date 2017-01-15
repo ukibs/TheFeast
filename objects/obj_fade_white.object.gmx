@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>fadeIn = true;
-alpha = 1;
+alpha = 0;
 fading_speed = 0.05;
 </string>
           </argument>

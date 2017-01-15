@@ -53,8 +53,8 @@ hspeed = 8;
             <kind>1</kind>
             <string>event_inherited();
 //Que comience de nuevo la carrerilla si se detiene
-if(hspeed &lt; obj_bull.hspeed)
-    hspeed ++;
+if(hspeed &lt; obj_bull.hspeed &amp;&amp; !place_meeting(x + hspeed + 1, y, obj_solid_terrain))
+    hspeed ++;  //
 //Y que pare si este para
 if(hspeed &gt; obj_bull.hspeed)
     hspeed --;
@@ -66,6 +66,10 @@ if(place_meeting(x + hspeed, y + distance_to_floor, obj_unjumpable_terrain)){
 //Giro si el toro está parado
 if(h_direction != 0 &amp;&amp; obj_bull.stopped = true)
     image_xscale = h_direction;
+    
+//Para que no se salga por abajooooo
+y = clamp(y, view_yview + sprite_height/2, 
+     view_yview + view_hview - sprite_height/2);
 </string>
           </argument>
         </arguments>

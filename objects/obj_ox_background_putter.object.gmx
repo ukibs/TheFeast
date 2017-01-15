@@ -25,12 +25,24 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//
+            <string>/*
+// Dibujar el fondo del escenario por partes para evitar difuminado
 draw_sprite(spr_ox_background_pieces, 0, 0, 0);
 draw_sprite(spr_ox_background_pieces, 1, 2048, 0);
 draw_sprite(spr_ox_background_pieces, 2, 2048*2, 0);
 draw_sprite(spr_ox_background_pieces, 3, 2048*3, 0);
 draw_sprite(spr_ox_background_pieces, 4, 2048*4, 0);
+*/
+
+
+// Dibujar el fondo del escenario por partes para evitar difuminado (sin elementos)
+draw_sprite(spr_ox_bg_clean, 0, 0, 0);
+draw_sprite(spr_ox_bg_clean, 1, 1366, 0);
+draw_sprite(spr_ox_bg_clean, 2, 1366*2, 0);
+draw_sprite(spr_ox_bg_clean, 3, 1366*3, 0);
+draw_sprite(spr_ox_bg_clean, 4, 1366*4, 0);
+draw_sprite(spr_ox_bg_clean, 5, 1366*5, 0);
+draw_sprite(spr_ox_bg_clean, 6, 1366*6, 0);
 </string>
           </argument>
         </arguments>
