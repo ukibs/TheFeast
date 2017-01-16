@@ -199,6 +199,13 @@
     <instance objName="obj_running_hooman" x="768" y="544" name="inst_EBAAE4E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_running_hooman" x="864" y="608" name="inst_181D060E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_running_hooman" x="1056" y="480" name="inst_44BB0AD1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="1792" y="544" name="inst_1FAA2B33" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="2368" y="480" name="inst_C36204AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="2880" y="640" name="inst_BED0E012" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="3712" y="288" name="inst_AFA95B94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="3904" y="640" name="inst_F5551AE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="5600" y="384" name="inst_13342FF9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_running_hooman" x="7168" y="416" name="inst_E2F88449" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -161,6 +161,8 @@ if(status_still == false &amp;&amp; status_dead == false){
     //y = clamp(y, view_yview + sprite_height/2, 
      //           view_yview + view_hview - sprite_height/2);
 }
+//Control de exceso de vida
+health = min(health, 100);
 //Control de muerte
 if(health &lt;= 0){
     hspeed = 0;
