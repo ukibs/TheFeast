@@ -141,7 +141,7 @@ if(ascending == true){
           <argument>
             <kind>1</kind>
             <string>//
-if(triggered == false &amp;&amp; other.grounded == true &amp;&amp; obj_bunny.status != 2){
+if(triggered == false &amp;&amp; other.grounded == true &amp;&amp; obj_bunny.status &lt; 2){
     triggered = true;
     //Alarma de tembleque
     alarm_set(0, 1);

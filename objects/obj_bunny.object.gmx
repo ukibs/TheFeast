@@ -32,7 +32,7 @@ distance_to_floor = 0;
 grav = 0;
 jumping = false;
 ascending = false;
-returning = true;
+returning = false;
 time_to_jump = 30;
 
 //Variables de salto
@@ -168,20 +168,26 @@ switch(status){
                         sprite_index = spr_bunny;
                     }
                     //En caso contrario simplemente cae
+                    else
+                        status = 2;
                 }
             }
         }
         else{
             //Que caiga si no tiene plataforma en los pies
             if(!place_meeting(x, y, obj_falling_platform)){
-                y += jumpspeed;
-                distance_to_floor -= jumpspeed;
+                status = 2;
                 alarm_set(0, -1);
             }
         }
     break;
-    //Volviendo a subir
+    //Simplement cayendo
     case 2:
+        y += jumpspeed;
+        distance_to_floor -= jumpspeed;
+    break;
+    //Volviendo a subir
+    case 3:
         if(returning == true){
             if(ascending == true){
                 y -= jumpspeed;
@@ -201,18 +207,19 @@ switch(status){
         }
     break;
     //Caida de meteoritos
-    case 3:
+    case 4:
         
     break;
 }
 
 //Controlamos que se escone
-if(distance_to_floor &lt;= -1000 &amp;&amp; status == 1){
-    if(stage &lt; 10){
+if(distance_to_floor &lt;= -1000 &amp;&amp; status == 2){
+    if(stage &lt; 600){
         stage ++;
-        status = 2;
+        status = 3;
         obj_falling_platform.again = true;
         obj_falling_platform.broken = false;
+        
         alarm_set(1, 150);
     }
     else{
@@ -274,8 +281,10 @@ else{
           <argument>
             <kind>1</kind>
             <string>//
-//draw_text(10, 10, distance_to_floor);
+//draw_text(10, 10, stage);
 //draw_text(10, 30, status);
+//draw_text(10, 50, returning);
+//draw_text(10, 70, ascending);
 </string>
           </argument>
         </arguments>
