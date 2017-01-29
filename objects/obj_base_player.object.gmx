@@ -230,7 +230,7 @@ if(grounded == true)
           <argument>
             <kind>1</kind>
             <string>//
-move_outside_solid(point_direction(other.x, other.y, x, y), 0);
+move_outside_all(point_direction(other.x, other.y, x, y), 0);
 </string>
           </argument>
         </arguments>

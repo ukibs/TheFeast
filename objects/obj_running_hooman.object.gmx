@@ -51,7 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>//
-if(x - obj_bull.x &lt; 600){
+if(x - obj_bull.x &lt; 1300){
     sprite_index = spr_running_human;
     hspeed = 1;
 }

@@ -115,6 +115,7 @@
       <object>objects\obj_fall_killer</object>
       <object>objects\obj_bunny</object>
       <object>objects\obj_bunny_camera</object>
+      <object>objects\obj_meteor</object>
     </objects>
     <objects name="Utilities">
       <object>objects\obj_main_menu</object>
